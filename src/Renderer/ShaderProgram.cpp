@@ -91,5 +91,10 @@ namespace Renderer {
 		shaderProgram.m_ID = 0;
 		shaderProgram.m_isCompiled = false;
 	}
+
+	void ShaderProgram::setInt(const std::string& name, const GLint value)
+	{
+		glUniform1i(glGetUniformLocation(m_ID, name.c_str()), value); // «адаем 1 int дл€ uniform типа текстуры дл€ всех шейдеров
+	}
 }
 
