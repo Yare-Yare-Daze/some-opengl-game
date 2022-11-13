@@ -27,6 +27,8 @@ target_link_libraries(${project_name} glfw)
 add_subdirectory(external/glad)
 target_link_libraries(${project_name} glad)
 
+include_directories(external/glm)
+
 set_target_properties(${project_name} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/)
 
 add_custom_command(TARGET ${project_name} POST_BUILD
